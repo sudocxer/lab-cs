@@ -1,4 +1,4 @@
-namespace lab2_c_
+namespace lab3_c_
 {
     partial class Form1
     {
@@ -17,77 +17,34 @@ namespace lab2_c_
 
         private void InitializeComponent()
         {
-            this.labelProduct = new Label();
-            this.textBoxProductName = new TextBox();
-            this.buttonCatalog = new Button();
-            this.buttonOrder = new Button();
-            this.buttonContacts = new Button();
-            this.buttonAbout = new Button();
+            this.listBoxStudents = new ListBox();
+            this.buttonAdd = new Button();
             this.buttonExit = new Button();
             this.SuspendLayout();
             //
-            // labelProduct
+            // listBoxStudents
             //
-            this.labelProduct.AutoSize = true;
-            this.labelProduct.Location = new Point(12, 20);
-            this.labelProduct.Name = "labelProduct";
-            this.labelProduct.Size = new Size(45, 15);
-            this.labelProduct.TabIndex = 0;
-            this.labelProduct.Text = "Товар:";
+            this.listBoxStudents.Location = new Point(12, 12);
+            this.listBoxStudents.Name = "listBoxStudents";
+            this.listBoxStudents.Size = new Size(360, 220);
+            this.listBoxStudents.TabIndex = 0;
             //
-            // textBoxProductName
+            // buttonAdd
             //
-            this.textBoxProductName.Location = new Point(100, 17);
-            this.textBoxProductName.Name = "textBoxProductName";
-            this.textBoxProductName.Size = new Size(248, 23);
-            this.textBoxProductName.TabIndex = 1;
-            //
-            // buttonCatalog
-            //
-            this.buttonCatalog.Location = new Point(12, 60);
-            this.buttonCatalog.Name = "buttonCatalog";
-            this.buttonCatalog.Size = new Size(160, 35);
-            this.buttonCatalog.TabIndex = 2;
-            this.buttonCatalog.Text = "Каталог товаров";
-            this.buttonCatalog.UseVisualStyleBackColor = true;
-            this.buttonCatalog.Click += new EventHandler(this.buttonCatalog_Click);
-            //
-            // buttonOrder
-            //
-            this.buttonOrder.Location = new Point(188, 60);
-            this.buttonOrder.Name = "buttonOrder";
-            this.buttonOrder.Size = new Size(160, 35);
-            this.buttonOrder.TabIndex = 3;
-            this.buttonOrder.Text = "Оформить заказ";
-            this.buttonOrder.UseVisualStyleBackColor = true;
-            this.buttonOrder.Click += new EventHandler(this.buttonOrder_Click);
-            //
-            // buttonContacts
-            //
-            this.buttonContacts.Location = new Point(12, 105);
-            this.buttonContacts.Name = "buttonContacts";
-            this.buttonContacts.Size = new Size(160, 35);
-            this.buttonContacts.TabIndex = 4;
-            this.buttonContacts.Text = "Контакты";
-            this.buttonContacts.UseVisualStyleBackColor = true;
-            this.buttonContacts.Click += new EventHandler(this.buttonContacts_Click);
-            //
-            // buttonAbout
-            //
-            this.buttonAbout.Location = new Point(188, 105);
-            this.buttonAbout.Name = "buttonAbout";
-            this.buttonAbout.Size = new Size(160, 35);
-            this.buttonAbout.TabIndex = 5;
-            this.buttonAbout.Text = "О программе";
-            this.buttonAbout.UseVisualStyleBackColor = true;
-            this.buttonAbout.Click += new EventHandler(this.buttonAbout_Click);
+            this.buttonAdd.Location = new Point(12, 244);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new Size(174, 35);
+            this.buttonAdd.TabIndex = 1;
+            this.buttonAdd.Text = "Добавить";
+            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new EventHandler(this.buttonAdd_Click);
             //
             // buttonExit
             //
-            this.buttonExit.Location = new Point(12, 150);
+            this.buttonExit.Location = new Point(198, 244);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new Size(336, 35);
-            this.buttonExit.TabIndex = 6;
+            this.buttonExit.Size = new Size(174, 35);
+            this.buttonExit.TabIndex = 2;
             this.buttonExit.Text = "Выход";
             this.buttonExit.UseVisualStyleBackColor = true;
             this.buttonExit.Click += new EventHandler(this.buttonExit_Click);
@@ -96,31 +53,23 @@ namespace lab2_c_
             //
             this.AutoScaleDimensions = new SizeF(7F, 15F);
             this.AutoScaleMode = AutoScaleMode.Font;
-            this.ClientSize = new Size(360, 205);
-            this.Controls.Add(this.labelProduct);
-            this.Controls.Add(this.textBoxProductName);
-            this.Controls.Add(this.buttonCatalog);
-            this.Controls.Add(this.buttonOrder);
-            this.Controls.Add(this.buttonContacts);
-            this.Controls.Add(this.buttonAbout);
+            this.ClientSize = new Size(384, 291);
+            this.Controls.Add(this.listBoxStudents);
+            this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.buttonExit);
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = FormStartPosition.CenterScreen;
-            this.Text = "Магазин";
+            this.Text = "Добавление студента";
+            this.Load += new EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
         }
 
         #endregion
 
-        private Label labelProduct;
-        private TextBox textBoxProductName;
-        private Button buttonCatalog;
-        private Button buttonOrder;
-        private Button buttonContacts;
-        private Button buttonAbout;
+        private ListBox listBoxStudents;
+        private Button buttonAdd;
         private Button buttonExit;
     }
 }

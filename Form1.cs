@@ -1,4 +1,4 @@
-namespace lab2_c_
+namespace lab3_c_
 {
     public partial class Form1 : Form
     {
@@ -7,48 +7,26 @@ namespace lab2_c_
             InitializeComponent();
         }
 
-        private void buttonCatalog_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            FormCatalog formCatalog = new FormCatalog();
-            formCatalog.Show();
+            listBoxStudents.Items.Add("Иванов Иван Иванович — гр. ПИ-21, 2 курс, Программная инженерия");
+            listBoxStudents.Items.Add("Петрова Анна Сергеевна — гр. ИС-19, 4 курс, Информационные системы");
         }
 
-        private void buttonOrder_Click(object sender, EventArgs e)
+        private void buttonAdd_Click(object sender, EventArgs e)
         {
-            string productName = textBoxProductName.Text.Trim();
-
-            if (string.IsNullOrWhiteSpace(productName))
+            using FormStudent form = new FormStudent();
+            if (form.ShowDialog(this) == DialogResult.OK)
             {
-                MessageBox.Show(
-                    "Введите название товара.",
-                    "Предупреждение",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
-                textBoxProductName.Focus();
-                return;
-            }
+                listBoxStudents.Items.Add(
+                    $"{form.FullName} — гр. {form.Group}, {form.Course} курс, {form.Specialty}");
 
-            using FormOrder formOrder = new FormOrder(productName);
-            if (formOrder.ShowDialog(this) == DialogResult.OK)
-            {
                 MessageBox.Show(
-                    $"Заказ оформлен!\n\nТовар: {formOrder.SelectedProductName}\nКоличество: {formOrder.Quantity} шт.",
-                    "Заказ принят",
+                    "Данные сохранены",
+                    "Информация",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }
-        }
-
-        private void buttonContacts_Click(object sender, EventArgs e)
-        {
-            FormContacts formContacts = new FormContacts();
-            formContacts.Show();
-        }
-
-        private void buttonAbout_Click(object sender, EventArgs e)
-        {
-            using FormAbout formAbout = new FormAbout();
-            formAbout.ShowDialog(this);
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
