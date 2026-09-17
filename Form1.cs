@@ -1,4 +1,4 @@
-namespace lab1_c_
+namespace lab2_c_
 {
     public partial class Form1 : Form
     {
@@ -7,71 +7,48 @@ namespace lab1_c_
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void buttonCatalog_Click(object sender, EventArgs e)
         {
-            textBoxLogin.Focus();
+            FormCatalog formCatalog = new FormCatalog();
+            formCatalog.Show();
         }
 
-        private void buttonRegister_Click(object sender, EventArgs e)
+        private void buttonOrder_Click(object sender, EventArgs e)
         {
-            string login = textBoxLogin.Text.Trim();
-            string password = textBoxPassword.Text;
-            string email = textBoxEmail.Text.Trim();
-            string phone = textBoxPhone.Text.Trim();
+            string productName = textBoxProductName.Text.Trim();
 
-            if (string.IsNullOrWhiteSpace(login) ||
-                string.IsNullOrWhiteSpace(password) ||
-                string.IsNullOrWhiteSpace(email) ||
-                string.IsNullOrWhiteSpace(phone))
+            if (string.IsNullOrWhiteSpace(productName))
             {
                 MessageBox.Show(
-                    "Заполните все поля формы.",
+                    "Введите название товара.",
                     "Предупреждение",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
+                textBoxProductName.Focus();
                 return;
             }
 
-            if (password.Length < 6)
+            using FormOrder formOrder = new FormOrder(productName);
+            if (formOrder.ShowDialog(this) == DialogResult.OK)
             {
                 MessageBox.Show(
-                    "Пароль должен содержать не менее 6 символов.",
-                    "Предупреждение",
+                    $"Заказ оформлен!\n\nТовар: {formOrder.SelectedProductName}\nКоличество: {formOrder.Quantity} шт.",
+                    "Заказ принят",
                     MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
-                textBoxPassword.Focus();
-                return;
+                    MessageBoxIcon.Information);
             }
-
-            if (!email.Contains('@') || !email.Contains('.'))
-            {
-                MessageBox.Show(
-                    "Введите корректный адрес электронной почты.",
-                    "Предупреждение",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
-                textBoxEmail.Focus();
-                return;
-            }
-
-            MessageBox.Show(
-                $"Пользователь успешно зарегистрирован!\n\n" +
-                $"Логин: {login}\n" +
-                $"Пароль: {new string('*', password.Length)}\n" +
-                $"Email: {email}\n" +
-                $"Телефон: {phone}",
-                "Регистрация завершена",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
         }
 
-        private void buttonClear_Click(object sender, EventArgs e)
+        private void buttonContacts_Click(object sender, EventArgs e)
         {
-            textBoxLogin.Clear();
-            textBoxPassword.Clear();
-            textBoxEmail.Clear();
-            textBoxPhone.Clear();
-            textBoxLogin.Focus();
+            FormContacts formContacts = new FormContacts();
+            formContacts.Show();
+        }
+
+        private void buttonAbout_Click(object sender, EventArgs e)
+        {
+            using FormAbout formAbout = new FormAbout();
+            formAbout.ShowDialog(this);
         }
 
         private void buttonExit_Click(object sender, EventArgs e)

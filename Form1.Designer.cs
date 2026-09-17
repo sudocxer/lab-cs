@@ -1,4 +1,4 @@
-namespace lab1_c_
+namespace lab2_c_
 {
     partial class Form1
     {
@@ -17,110 +17,77 @@ namespace lab1_c_
 
         private void InitializeComponent()
         {
-            this.labelLogin = new Label();
-            this.textBoxLogin = new TextBox();
-            this.labelPassword = new Label();
-            this.textBoxPassword = new TextBox();
-            this.labelEmail = new Label();
-            this.textBoxEmail = new TextBox();
-            this.labelPhone = new Label();
-            this.textBoxPhone = new TextBox();
-            this.buttonRegister = new Button();
-            this.buttonClear = new Button();
+            this.labelProduct = new Label();
+            this.textBoxProductName = new TextBox();
+            this.buttonCatalog = new Button();
+            this.buttonOrder = new Button();
+            this.buttonContacts = new Button();
+            this.buttonAbout = new Button();
             this.buttonExit = new Button();
             this.SuspendLayout();
             //
-            // labelLogin
+            // labelProduct
             //
-            this.labelLogin.AutoSize = true;
-            this.labelLogin.Location = new Point(12, 20);
-            this.labelLogin.Name = "labelLogin";
-            this.labelLogin.Size = new Size(45, 15);
-            this.labelLogin.TabIndex = 0;
-            this.labelLogin.Text = "Логин:";
+            this.labelProduct.AutoSize = true;
+            this.labelProduct.Location = new Point(12, 20);
+            this.labelProduct.Name = "labelProduct";
+            this.labelProduct.Size = new Size(45, 15);
+            this.labelProduct.TabIndex = 0;
+            this.labelProduct.Text = "Товар:";
             //
-            // textBoxLogin
+            // textBoxProductName
             //
-            this.textBoxLogin.Location = new Point(140, 17);
-            this.textBoxLogin.Name = "textBoxLogin";
-            this.textBoxLogin.Size = new Size(220, 23);
-            this.textBoxLogin.TabIndex = 1;
+            this.textBoxProductName.Location = new Point(100, 17);
+            this.textBoxProductName.Name = "textBoxProductName";
+            this.textBoxProductName.Size = new Size(248, 23);
+            this.textBoxProductName.TabIndex = 1;
             //
-            // labelPassword
+            // buttonCatalog
             //
-            this.labelPassword.AutoSize = true;
-            this.labelPassword.Location = new Point(12, 55);
-            this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new Size(50, 15);
-            this.labelPassword.TabIndex = 2;
-            this.labelPassword.Text = "Пароль:";
+            this.buttonCatalog.Location = new Point(12, 60);
+            this.buttonCatalog.Name = "buttonCatalog";
+            this.buttonCatalog.Size = new Size(160, 35);
+            this.buttonCatalog.TabIndex = 2;
+            this.buttonCatalog.Text = "Каталог товаров";
+            this.buttonCatalog.UseVisualStyleBackColor = true;
+            this.buttonCatalog.Click += new EventHandler(this.buttonCatalog_Click);
             //
-            // textBoxPassword
+            // buttonOrder
             //
-            this.textBoxPassword.Location = new Point(140, 52);
-            this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new Size(220, 23);
-            this.textBoxPassword.TabIndex = 3;
-            this.textBoxPassword.UseSystemPasswordChar = true;
+            this.buttonOrder.Location = new Point(188, 60);
+            this.buttonOrder.Name = "buttonOrder";
+            this.buttonOrder.Size = new Size(160, 35);
+            this.buttonOrder.TabIndex = 3;
+            this.buttonOrder.Text = "Оформить заказ";
+            this.buttonOrder.UseVisualStyleBackColor = true;
+            this.buttonOrder.Click += new EventHandler(this.buttonOrder_Click);
             //
-            // labelEmail
+            // buttonContacts
             //
-            this.labelEmail.AutoSize = true;
-            this.labelEmail.Location = new Point(12, 90);
-            this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new Size(42, 15);
-            this.labelEmail.TabIndex = 4;
-            this.labelEmail.Text = "Email:";
+            this.buttonContacts.Location = new Point(12, 105);
+            this.buttonContacts.Name = "buttonContacts";
+            this.buttonContacts.Size = new Size(160, 35);
+            this.buttonContacts.TabIndex = 4;
+            this.buttonContacts.Text = "Контакты";
+            this.buttonContacts.UseVisualStyleBackColor = true;
+            this.buttonContacts.Click += new EventHandler(this.buttonContacts_Click);
             //
-            // textBoxEmail
+            // buttonAbout
             //
-            this.textBoxEmail.Location = new Point(140, 87);
-            this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new Size(220, 23);
-            this.textBoxEmail.TabIndex = 5;
-            //
-            // labelPhone
-            //
-            this.labelPhone.AutoSize = true;
-            this.labelPhone.Location = new Point(12, 125);
-            this.labelPhone.Name = "labelPhone";
-            this.labelPhone.Size = new Size(59, 15);
-            this.labelPhone.TabIndex = 6;
-            this.labelPhone.Text = "Телефон:";
-            //
-            // textBoxPhone
-            //
-            this.textBoxPhone.Location = new Point(140, 122);
-            this.textBoxPhone.Name = "textBoxPhone";
-            this.textBoxPhone.Size = new Size(220, 23);
-            this.textBoxPhone.TabIndex = 7;
-            //
-            // buttonRegister
-            //
-            this.buttonRegister.Location = new Point(12, 170);
-            this.buttonRegister.Name = "buttonRegister";
-            this.buttonRegister.Size = new Size(150, 35);
-            this.buttonRegister.TabIndex = 8;
-            this.buttonRegister.Text = "Зарегистрировать";
-            this.buttonRegister.UseVisualStyleBackColor = true;
-            this.buttonRegister.Click += new EventHandler(this.buttonRegister_Click);
-            //
-            // buttonClear
-            //
-            this.buttonClear.Location = new Point(172, 170);
-            this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new Size(90, 35);
-            this.buttonClear.TabIndex = 9;
-            this.buttonClear.Text = "Очистить";
-            this.buttonClear.UseVisualStyleBackColor = true;
-            this.buttonClear.Click += new EventHandler(this.buttonClear_Click);
+            this.buttonAbout.Location = new Point(188, 105);
+            this.buttonAbout.Name = "buttonAbout";
+            this.buttonAbout.Size = new Size(160, 35);
+            this.buttonAbout.TabIndex = 5;
+            this.buttonAbout.Text = "О программе";
+            this.buttonAbout.UseVisualStyleBackColor = true;
+            this.buttonAbout.Click += new EventHandler(this.buttonAbout_Click);
             //
             // buttonExit
             //
-            this.buttonExit.Location = new Point(272, 170);
+            this.buttonExit.Location = new Point(12, 150);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new Size(90, 35);
-            this.buttonExit.TabIndex = 10;
+            this.buttonExit.Size = new Size(336, 35);
+            this.buttonExit.TabIndex = 6;
             this.buttonExit.Text = "Выход";
             this.buttonExit.UseVisualStyleBackColor = true;
             this.buttonExit.Click += new EventHandler(this.buttonExit_Click);
@@ -129,40 +96,31 @@ namespace lab1_c_
             //
             this.AutoScaleDimensions = new SizeF(7F, 15F);
             this.AutoScaleMode = AutoScaleMode.Font;
-            this.ClientSize = new Size(384, 231);
-            this.Controls.Add(this.labelLogin);
-            this.Controls.Add(this.textBoxLogin);
-            this.Controls.Add(this.labelPassword);
-            this.Controls.Add(this.textBoxPassword);
-            this.Controls.Add(this.labelEmail);
-            this.Controls.Add(this.textBoxEmail);
-            this.Controls.Add(this.labelPhone);
-            this.Controls.Add(this.textBoxPhone);
-            this.Controls.Add(this.buttonRegister);
-            this.Controls.Add(this.buttonClear);
+            this.ClientSize = new Size(360, 205);
+            this.Controls.Add(this.labelProduct);
+            this.Controls.Add(this.textBoxProductName);
+            this.Controls.Add(this.buttonCatalog);
+            this.Controls.Add(this.buttonOrder);
+            this.Controls.Add(this.buttonContacts);
+            this.Controls.Add(this.buttonAbout);
             this.Controls.Add(this.buttonExit);
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = FormStartPosition.CenterScreen;
-            this.Text = "Регистрация пользователя";
-            this.Load += new EventHandler(this.Form1_Load);
+            this.Text = "Магазин";
             this.ResumeLayout(false);
             this.PerformLayout();
         }
 
         #endregion
 
-        private Label labelLogin;
-        private TextBox textBoxLogin;
-        private Label labelPassword;
-        private TextBox textBoxPassword;
-        private Label labelEmail;
-        private TextBox textBoxEmail;
-        private Label labelPhone;
-        private TextBox textBoxPhone;
-        private Button buttonRegister;
-        private Button buttonClear;
+        private Label labelProduct;
+        private TextBox textBoxProductName;
+        private Button buttonCatalog;
+        private Button buttonOrder;
+        private Button buttonContacts;
+        private Button buttonAbout;
         private Button buttonExit;
     }
 }
