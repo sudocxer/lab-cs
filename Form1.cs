@@ -1,31 +1,87 @@
-namespace lab3_c_
+namespace lab4_c_
 {
     public partial class Form1 : Form
     {
+        private FormInfo? formInfo;
+        private FormSettings? formSettings;
+        private FormSearch? formSearch;
+        private FormLog? formLog;
+        private FormHelp? formHelp;
+
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void ShowAt(Form form, int offsetX, int offsetY)
         {
-            listBoxStudents.Items.Add("Иванов Иван Иванович — гр. ПИ-21, 2 курс, Программная инженерия");
-            listBoxStudents.Items.Add("Петрова Анна Сергеевна — гр. ИС-19, 4 курс, Информационные системы");
+            form.StartPosition = FormStartPosition.Manual;
+            form.Location = new Point(this.Left + offsetX, this.Top + offsetY);
+            form.Show();
         }
 
-        private void buttonAdd_Click(object sender, EventArgs e)
+        private void buttonInfo_Click(object sender, EventArgs e)
         {
-            using FormStudent form = new FormStudent();
-            if (form.ShowDialog(this) == DialogResult.OK)
+            if (formInfo == null || formInfo.IsDisposed)
             {
-                listBoxStudents.Items.Add(
-                    $"{form.FullName} — гр. {form.Group}, {form.Course} курс, {form.Specialty}");
+                formInfo = new FormInfo();
+                ShowAt(formInfo, 390, 0);
+            }
+            else
+            {
+                formInfo.Activate();
+            }
+        }
 
-                MessageBox.Show(
-                    "Данные сохранены",
-                    "Информация",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
+        private void buttonSettings_Click(object sender, EventArgs e)
+        {
+            if (formSettings == null || formSettings.IsDisposed)
+            {
+                formSettings = new FormSettings();
+                ShowAt(formSettings, 760, 0);
+            }
+            else
+            {
+                formSettings.Activate();
+            }
+        }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            if (formSearch == null || formSearch.IsDisposed)
+            {
+                formSearch = new FormSearch();
+                ShowAt(formSearch, 1140, 0);
+            }
+            else
+            {
+                formSearch.Activate();
+            }
+        }
+
+        private void buttonLog_Click(object sender, EventArgs e)
+        {
+            if (formLog == null || formLog.IsDisposed)
+            {
+                formLog = new FormLog();
+                ShowAt(formLog, 390, 280);
+            }
+            else
+            {
+                formLog.Activate();
+            }
+        }
+
+        private void buttonHelp_Click(object sender, EventArgs e)
+        {
+            if (formHelp == null || formHelp.IsDisposed)
+            {
+                formHelp = new FormHelp();
+                ShowAt(formHelp, 760, 280);
+            }
+            else
+            {
+                formHelp.Activate();
             }
         }
 

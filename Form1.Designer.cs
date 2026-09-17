@@ -1,4 +1,4 @@
-namespace lab3_c_
+namespace lab4_c_
 {
     partial class Form1
     {
@@ -17,34 +17,70 @@ namespace lab3_c_
 
         private void InitializeComponent()
         {
-            this.listBoxStudents = new ListBox();
-            this.buttonAdd = new Button();
+            this.buttonInfo = new Button();
+            this.buttonSettings = new Button();
+            this.buttonSearch = new Button();
+            this.buttonLog = new Button();
+            this.buttonHelp = new Button();
             this.buttonExit = new Button();
             this.SuspendLayout();
             //
-            // listBoxStudents
+            // buttonInfo
             //
-            this.listBoxStudents.Location = new Point(12, 12);
-            this.listBoxStudents.Name = "listBoxStudents";
-            this.listBoxStudents.Size = new Size(360, 220);
-            this.listBoxStudents.TabIndex = 0;
+            this.buttonInfo.Location = new Point(12, 12);
+            this.buttonInfo.Name = "buttonInfo";
+            this.buttonInfo.Size = new Size(160, 40);
+            this.buttonInfo.TabIndex = 0;
+            this.buttonInfo.Text = "Информация";
+            this.buttonInfo.UseVisualStyleBackColor = true;
+            this.buttonInfo.Click += new EventHandler(this.buttonInfo_Click);
             //
-            // buttonAdd
+            // buttonSettings
             //
-            this.buttonAdd.Location = new Point(12, 244);
-            this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new Size(174, 35);
-            this.buttonAdd.TabIndex = 1;
-            this.buttonAdd.Text = "Добавить";
-            this.buttonAdd.UseVisualStyleBackColor = true;
-            this.buttonAdd.Click += new EventHandler(this.buttonAdd_Click);
+            this.buttonSettings.Location = new Point(188, 12);
+            this.buttonSettings.Name = "buttonSettings";
+            this.buttonSettings.Size = new Size(160, 40);
+            this.buttonSettings.TabIndex = 1;
+            this.buttonSettings.Text = "Настройки";
+            this.buttonSettings.UseVisualStyleBackColor = true;
+            this.buttonSettings.Click += new EventHandler(this.buttonSettings_Click);
+            //
+            // buttonSearch
+            //
+            this.buttonSearch.Location = new Point(12, 62);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new Size(160, 40);
+            this.buttonSearch.TabIndex = 2;
+            this.buttonSearch.Text = "Поиск";
+            this.buttonSearch.UseVisualStyleBackColor = true;
+            this.buttonSearch.Click += new EventHandler(this.buttonSearch_Click);
+            //
+            // buttonLog
+            //
+            this.buttonLog.Location = new Point(188, 62);
+            this.buttonLog.Name = "buttonLog";
+            this.buttonLog.Size = new Size(160, 40);
+            this.buttonLog.TabIndex = 3;
+            this.buttonLog.Text = "Журнал";
+            this.buttonLog.UseVisualStyleBackColor = true;
+            this.buttonLog.Click += new EventHandler(this.buttonLog_Click);
+            //
+            // buttonHelp
+            //
+            this.buttonHelp.Location = new Point(12, 112);
+            this.buttonHelp.Name = "buttonHelp";
+            this.buttonHelp.Size = new Size(160, 40);
+            this.buttonHelp.TabIndex = 4;
+            this.buttonHelp.Text = "Справка";
+            this.buttonHelp.UseVisualStyleBackColor = true;
+            this.buttonHelp.Click += new EventHandler(this.buttonHelp_Click);
             //
             // buttonExit
             //
-            this.buttonExit.Location = new Point(198, 244);
+            this.buttonExit.Location = new Point(188, 112);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new Size(174, 35);
-            this.buttonExit.TabIndex = 2;
+            this.buttonExit.Size = new Size(160, 40);
+            this.buttonExit.TabIndex = 5;
             this.buttonExit.Text = "Выход";
             this.buttonExit.UseVisualStyleBackColor = true;
             this.buttonExit.Click += new EventHandler(this.buttonExit_Click);
@@ -53,23 +89,28 @@ namespace lab3_c_
             //
             this.AutoScaleDimensions = new SizeF(7F, 15F);
             this.AutoScaleMode = AutoScaleMode.Font;
-            this.ClientSize = new Size(384, 291);
-            this.Controls.Add(this.listBoxStudents);
-            this.Controls.Add(this.buttonAdd);
+            this.ClientSize = new Size(360, 168);
+            this.Controls.Add(this.buttonInfo);
+            this.Controls.Add(this.buttonSettings);
+            this.Controls.Add(this.buttonSearch);
+            this.Controls.Add(this.buttonLog);
+            this.Controls.Add(this.buttonHelp);
             this.Controls.Add(this.buttonExit);
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = FormStartPosition.CenterScreen;
-            this.Text = "Добавление студента";
-            this.Load += new EventHandler(this.Form1_Load);
+            this.Text = "Многоканальный рабочий стол";
             this.ResumeLayout(false);
         }
 
         #endregion
 
-        private ListBox listBoxStudents;
-        private Button buttonAdd;
+        private Button buttonInfo;
+        private Button buttonSettings;
+        private Button buttonSearch;
+        private Button buttonLog;
+        private Button buttonHelp;
         private Button buttonExit;
     }
 }
