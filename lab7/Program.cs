@@ -1,4 +1,4 @@
-namespace lab5_c_
+namespace lab7_c_
 {
     internal static class Program
     {
