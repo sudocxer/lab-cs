@@ -126,7 +126,7 @@ namespace lab8_c_
             //
             this.buttonAdd.Location = new Point(12, 300);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new Size(160, 34);
+            this.buttonAdd.Size = new Size(140, 34);
             this.buttonAdd.TabIndex = 9;
             this.buttonAdd.Text = "Добавить";
             this.buttonAdd.UseVisualStyleBackColor = true;
@@ -134,9 +134,9 @@ namespace lab8_c_
             //
             // buttonUpdate
             //
-            this.buttonUpdate.Location = new Point(182, 300);
+            this.buttonUpdate.Location = new Point(158, 300);
             this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new Size(160, 34);
+            this.buttonUpdate.Size = new Size(140, 34);
             this.buttonUpdate.TabIndex = 10;
             this.buttonUpdate.Text = "Изменить";
             this.buttonUpdate.UseVisualStyleBackColor = true;
@@ -144,9 +144,9 @@ namespace lab8_c_
             //
             // buttonDelete
             //
-            this.buttonDelete.Location = new Point(352, 300);
+            this.buttonDelete.Location = new Point(304, 300);
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new Size(160, 34);
+            this.buttonDelete.Size = new Size(140, 34);
             this.buttonDelete.TabIndex = 11;
             this.buttonDelete.Text = "Удалить";
             this.buttonDelete.UseVisualStyleBackColor = true;
@@ -154,9 +154,9 @@ namespace lab8_c_
             //
             // buttonClear
             //
-            this.buttonClear.Location = new Point(522, 300);
+            this.buttonClear.Location = new Point(450, 300);
             this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new Size(206, 34);
+            this.buttonClear.Size = new Size(140, 34);
             this.buttonClear.TabIndex = 12;
             this.buttonClear.Text = "Очистить поля";
             this.buttonClear.UseVisualStyleBackColor = true;
@@ -168,42 +168,42 @@ namespace lab8_c_
             this.labelSearch.Location = new Point(12, 352);
             this.labelSearch.Name = "labelSearch";
             this.labelSearch.Size = new Size(110, 15);
-            this.labelSearch.TabIndex = 13;
+            this.labelSearch.TabIndex = 14;
             this.labelSearch.Text = "Поиск по фамилии:";
             //
             // textBoxSearch
             //
             this.textBoxSearch.Location = new Point(140, 346);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new Size(220, 23);
-            this.textBoxSearch.TabIndex = 14;
+            this.textBoxSearch.Size = new Size(260, 23);
+            this.textBoxSearch.TabIndex = 15;
             //
             // buttonSearch
             //
-            this.buttonSearch.Location = new Point(368, 345);
+            this.buttonSearch.Location = new Point(410, 345);
             this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new Size(90, 25);
-            this.buttonSearch.TabIndex = 15;
+            this.buttonSearch.Size = new Size(100, 25);
+            this.buttonSearch.TabIndex = 16;
             this.buttonSearch.Text = "Найти";
             this.buttonSearch.UseVisualStyleBackColor = true;
             this.buttonSearch.Click += new EventHandler(this.buttonSearch_Click);
             //
             // buttonShowAll
             //
-            this.buttonShowAll.Location = new Point(464, 345);
+            this.buttonShowAll.Location = new Point(520, 345);
             this.buttonShowAll.Name = "buttonShowAll";
-            this.buttonShowAll.Size = new Size(140, 25);
-            this.buttonShowAll.TabIndex = 16;
+            this.buttonShowAll.Size = new Size(150, 25);
+            this.buttonShowAll.TabIndex = 17;
             this.buttonShowAll.Text = "Показать всех";
             this.buttonShowAll.UseVisualStyleBackColor = true;
             this.buttonShowAll.Click += new EventHandler(this.buttonShowAll_Click);
             //
             // buttonExit
             //
-            this.buttonExit.Location = new Point(616, 345);
+            this.buttonExit.Location = new Point(596, 300);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new Size(112, 25);
-            this.buttonExit.TabIndex = 17;
+            this.buttonExit.Size = new Size(132, 34);
+            this.buttonExit.TabIndex = 13;
             this.buttonExit.Text = "Выход";
             this.buttonExit.UseVisualStyleBackColor = true;
             this.buttonExit.Click += new EventHandler(this.buttonExit_Click);

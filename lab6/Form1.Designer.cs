@@ -102,10 +102,10 @@ namespace lab6_c_
             this.groupBoxForm.Controls.Add(this.radioButtonEveningTime);
             this.groupBoxForm.Controls.Add(this.radioButtonPartTime);
             this.groupBoxForm.Controls.Add(this.radioButtonFullTime);
-            this.groupBoxForm.Location = new Point(12, 86);
+            this.groupBoxForm.Location = new Point(12, 120);
             this.groupBoxForm.Name = "groupBoxForm";
             this.groupBoxForm.Size = new Size(446, 54);
-            this.groupBoxForm.TabIndex = 6;
+            this.groupBoxForm.TabIndex = 8;
             this.groupBoxForm.TabStop = false;
             this.groupBoxForm.Text = "Форма обучения";
             //
@@ -144,10 +144,10 @@ namespace lab6_c_
             // labelDisciplines
             //
             this.labelDisciplines.AutoSize = true;
-            this.labelDisciplines.Location = new Point(12, 152);
+            this.labelDisciplines.Location = new Point(12, 186);
             this.labelDisciplines.Name = "labelDisciplines";
             this.labelDisciplines.Size = new Size(168, 15);
-            this.labelDisciplines.TabIndex = 7;
+            this.labelDisciplines.TabIndex = 9;
             this.labelDisciplines.Text = "Дополнительные дисциплины:";
             //
             // checkedListBoxDisciplines
@@ -160,49 +160,49 @@ namespace lab6_c_
                 "Экономика",
                 "Философия",
                 "Физическая культура"});
-            this.checkedListBoxDisciplines.Location = new Point(12, 172);
+            this.checkedListBoxDisciplines.Location = new Point(12, 206);
             this.checkedListBoxDisciplines.Name = "checkedListBoxDisciplines";
             this.checkedListBoxDisciplines.Size = new Size(446, 106);
-            this.checkedListBoxDisciplines.TabIndex = 8;
+            this.checkedListBoxDisciplines.TabIndex = 10;
             this.checkedListBoxDisciplines.ItemCheck += new ItemCheckEventHandler(this.checkedListBoxDisciplines_ItemCheck);
             //
             // labelSelectedCount
             //
             this.labelSelectedCount.AutoSize = true;
-            this.labelSelectedCount.Location = new Point(12, 286);
+            this.labelSelectedCount.Location = new Point(12, 320);
             this.labelSelectedCount.Name = "labelSelectedCount";
             this.labelSelectedCount.Size = new Size(124, 15);
-            this.labelSelectedCount.TabIndex = 9;
+            this.labelSelectedCount.TabIndex = 11;
             this.labelSelectedCount.Text = "Выбрано дисциплин: 0";
             //
             // labelBirthDate
             //
             this.labelBirthDate.AutoSize = true;
-            this.labelBirthDate.Location = new Point(12, 317);
+            this.labelBirthDate.Location = new Point(12, 88);
             this.labelBirthDate.Name = "labelBirthDate";
             this.labelBirthDate.Size = new Size(97, 15);
-            this.labelBirthDate.TabIndex = 10;
+            this.labelBirthDate.TabIndex = 6;
             this.labelBirthDate.Text = "Дата рождения:";
             //
             // dateTimePickerBirthDate
             //
             this.dateTimePickerBirthDate.Format = DateTimePickerFormat.Short;
-            this.dateTimePickerBirthDate.Location = new Point(170, 313);
+            this.dateTimePickerBirthDate.Location = new Point(170, 85);
             this.dateTimePickerBirthDate.Name = "dateTimePickerBirthDate";
             this.dateTimePickerBirthDate.Size = new Size(200, 23);
-            this.dateTimePickerBirthDate.TabIndex = 11;
+            this.dateTimePickerBirthDate.TabIndex = 7;
             this.dateTimePickerBirthDate.Value = new DateTime(2006, 1, 1, 0, 0, 0, 0);
             //
             // progressBarRegister
             //
-            this.progressBarRegister.Location = new Point(12, 349);
+            this.progressBarRegister.Location = new Point(12, 347);
             this.progressBarRegister.Name = "progressBarRegister";
             this.progressBarRegister.Size = new Size(446, 18);
             this.progressBarRegister.TabIndex = 12;
             //
             // buttonRegister
             //
-            this.buttonRegister.Location = new Point(12, 378);
+            this.buttonRegister.Location = new Point(12, 377);
             this.buttonRegister.Name = "buttonRegister";
             this.buttonRegister.Size = new Size(144, 36);
             this.buttonRegister.TabIndex = 13;
@@ -212,7 +212,7 @@ namespace lab6_c_
             //
             // buttonClear
             //
-            this.buttonClear.Location = new Point(164, 378);
+            this.buttonClear.Location = new Point(164, 377);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new Size(144, 36);
             this.buttonClear.TabIndex = 14;
@@ -222,7 +222,7 @@ namespace lab6_c_
             //
             // buttonExit
             //
-            this.buttonExit.Location = new Point(316, 378);
+            this.buttonExit.Location = new Point(316, 377);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new Size(142, 36);
             this.buttonExit.TabIndex = 15;
@@ -233,7 +233,7 @@ namespace lab6_c_
             // labelResultCaption
             //
             this.labelResultCaption.AutoSize = true;
-            this.labelResultCaption.Location = new Point(12, 426);
+            this.labelResultCaption.Location = new Point(12, 425);
             this.labelResultCaption.Name = "labelResultCaption";
             this.labelResultCaption.Size = new Size(133, 15);
             this.labelResultCaption.TabIndex = 16;
@@ -241,12 +241,12 @@ namespace lab6_c_
             //
             // textBoxResult
             //
-            this.textBoxResult.Location = new Point(12, 448);
+            this.textBoxResult.Location = new Point(12, 446);
             this.textBoxResult.Multiline = true;
             this.textBoxResult.Name = "textBoxResult";
             this.textBoxResult.ReadOnly = true;
             this.textBoxResult.ScrollBars = ScrollBars.Vertical;
-            this.textBoxResult.Size = new Size(446, 94);
+            this.textBoxResult.Size = new Size(446, 96);
             this.textBoxResult.TabIndex = 17;
             this.textBoxResult.TabStop = false;
             //
